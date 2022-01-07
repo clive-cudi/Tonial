@@ -1,0 +1,93 @@
+.cw-wrapper{
+    display: flex;
+    height: 70px;
+    min-height: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.cw-content {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: rgba(31, 30, 30, 0.344);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.cw-profile{
+    display: flex;
+    height: 100%;
+    width: 120px;
+    align-items: center;
+}
+.cw-profile h3{
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Catamaran', sans-serif;
+}
+.cw-content:hover{
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+.cw-content:hover > .cw-profile > h3 {
+    color: black;
+}
+.cw-info{
+    display: flex;
+    height: 100%;
+    width: 80px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cw-info span {
+    display: flex;
+    color: white;
+    height: 18px;
+    width: 18px;
+    background: linear-gradient(135deg, rgb(65, 65, 253), blue, rgb(24, 24, 189));;
+    border-radius: 50%;
+    font-size: 10px;
+    /* background: rgb(77, 98, 255); */
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.cw-wrapper:focus{
+    background: rgb(76, 79, 84);
+}
+.img-modal-wrapper{
+    display: flex;
+    position: relative;
+    height: 360px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    animation: animate-fade-in 0.4s linear;
+}
+.img-modal-wrapper > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.img-modal-wrapper > button{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgb(39, 37, 37);
+    color: white;
+}
+.img-modal-wrapper > button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    background: rgb(53, 50, 50);
+}

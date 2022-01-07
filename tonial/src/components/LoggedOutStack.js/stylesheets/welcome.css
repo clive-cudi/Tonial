@@ -1,0 +1,144 @@
+.welcome-main-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.welcome-wrapper {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(128, 128, 128, 0.357);
+  flex-direction: column;
+  max-width: 500px;
+}
+.title-wrapper {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+}
+.title-wrapper h1 {
+  color: white;
+  font-family: "Festive", cursive;
+  /* font-family: 'Abril Fatface', cursive; */
+  font-size: 50px;
+}
+.welcome-content {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.welcome-content a {
+    text-decoration: none;
+}
+.button-wrapper {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.button-wrapper button {
+  display: flex;
+  height: 60px;
+  width: 240px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 16px;
+  background: none;
+  color: white;
+  border: 0.5px solid rgba(128, 128, 128, 0.323);
+  border-radius: 10px;
+  position: relative;
+}
+.button-wrapper button:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+.button-wrapper button:hover svg {
+  margin-left: 20px;
+  animation: rotate_icon 0.4s linear;
+}
+.button-wrapper button:focus{
+    background: linear-gradient(135deg, rgb(65, 65, 253), blue, rgb(24, 24, 189));
+    color: white;
+    box-shadow: 1px 1px 4px 4px rgb(31, 30, 30);
+    animation: click 0.4s linear infinite;
+}
+.button-wrapper button:focus svg{
+    animation: rotate_icon 0.4s linear;
+    margin-left: 0px;
+}
+.welcome-logo-wrapper{
+  display: flex;
+  height: 180px;
+  width: 100%;
+  min-height: 100px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: none
+}
+.welcome-login-title-wrapper h2{
+  font-size: 50px;
+  font-family: "Festive", cursive;
+}
+.welcome-logo{
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+.welcome-login-title-wrapper{
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+}
+@keyframes click {
+    50%
+    {
+        scale: 0.99;
+    }
+    100%
+    {
+        scale: 1;
+    }
+}
+/* .button-wrapper button span{
+    background: white;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+}
+@keyframes bg-swipe {
+    0%
+    {
+        left: 0%;
+    }
+    100%
+    {
+        right: 0%;
+    }
+} */
+@keyframes rotate_icon {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

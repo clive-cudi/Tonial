@@ -1,0 +1,169 @@
+.sidenav-main-wrapper {
+  display: flex;
+  height: 100%;
+  width: 80px;
+  max-width: 80px;
+  align-items: center;
+  padding-right: 10px;
+}
+.sidenav-h-main-wrapper {
+  display: flex;
+  height: 12%;
+  min-height: 12%;
+  width: 100%;
+  max-width: none;
+  padding-right: 0px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 6px;
+}
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: rgb(26, 25, 25);
+  /* background: rgb(248, 248, 248); */
+  padding: 10px;
+  flex-direction: column;
+}
+.sidenav-h-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: rgb(26, 25, 25);
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.sn-btn {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.sn-h-btn{
+  display: flex;
+  height: 100%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+.sn-btn button {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  background: none;
+  color: white;
+  border: 0.5px solid rgba(128, 128, 128, 0.323);
+  border-radius: 10px;
+}
+.sn-h-btn button{
+  display: flex;
+  height: 100%;
+  width: 70%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  background: none;
+  color: white;
+  border: 0.5px solid rgba(128, 128, 128, 0.323);
+  border-radius: 10px;
+}
+.sn-btn button:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+.sn-h-btn button:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+.sn-btn button:hover svg {
+  animation: rotate_icon 0.4s linear;
+}
+.sn-h-btn button:hover svg {
+  animation: rotate_icon 0.4s linear;
+}
+/* .sn-btn button:focus {
+  background: linear-gradient(135deg, rgb(65, 65, 253), blue, rgb(24, 24, 189));
+  color: white;
+  box-shadow: 1px 1px 4px 4px rgb(31, 30, 30);
+  animation: click 0.4s linear infinite;
+} */
+.sn-btn .sn-btn-active{
+  background: linear-gradient(135deg, rgb(65, 65, 253), blue, rgb(24, 24, 189));
+  color: white;
+  box-shadow: 1px 1px 4px 4px rgb(31, 30, 30);
+  animation: animate-btn 1.6s linear infinite;
+}
+.sn-h-btn .sn-btn-active{
+  background: linear-gradient(135deg, rgb(65, 65, 253), blue, rgb(24, 24, 189));
+  color: white;
+  box-shadow: 1px 1px 4px 4px rgb(31, 30, 30);
+  animation: animate-btn 1.6s linear infinite;
+}
+.sn-btn button:focus svg {
+  animation: rotate_icon 0.4s linear;
+  margin-left: 0px;
+}
+.sn-h-btn button:focus svg {
+  animation: rotate_icon 0.4s linear;
+  margin-left: 0px;
+}
+.indicator{
+  display: flex;
+  height: 5px;
+  width: 8px;
+  background: chartreuse;
+  border-radius: 3px;
+  position: absolute;
+  left: 0px;
+  box-shadow: 1px 1px 10px 4px rgb(31, 30, 30);
+  animation: indicate 0.6s linear infinite;
+}
+.indicator-h{
+  display: none;
+  height: 5px;
+  width: 8px;
+  background: chartreuse;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 0px;
+  box-shadow: 1px 1px 10px 4px rgb(31, 30, 30);
+  animation: indicate 0.6s linear infinite;
+}
+@keyframes animate-btn {
+  0%
+  {
+      scale: 1.02;
+  }
+  50%
+  {
+      scale: 1.0;
+  }
+  100%
+  {
+      scale: 1.02;
+  }
+}
+@keyframes indicate {
+  0%
+  {
+    left: 0px;
+  }
+  50%
+  {
+    left: 2px;
+  }
+  100%
+  {
+    left: 1px;
+  }
+}

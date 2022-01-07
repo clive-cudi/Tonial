@@ -1,0 +1,74 @@
+.ci-profile-wrapper{
+    display: flex;
+    height: 340px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(48, 48, 48);
+    min-height: 320px;
+}
+.ci-username-wrapper{
+    display: flex;
+    height: 40px;
+    min-height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.ci-username-wrapper h4{
+    color: white;
+}
+.ci-profile-pic{
+    display: flex;
+    height: 244px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.ci-profile-pic-holder{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+.ci-profile-pic-holder img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 6px 1px rgb(48, 48, 48);
+    align-items: center;
+    justify-content: center;
+}
+.participants-wrapper{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    border: 0.5px solid rgb(48, 48, 48);
+    border-radius: 8px;
+    padding: 4px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+.ptc-wrapper{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(48, 48, 48);
+    margin-top: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.ptc-wrapper:hover{
+    background: rgb(48, 48, 48);
+}
+.ptc-wrapper h5{
+    color: white;
+    margin: 10px;
+}

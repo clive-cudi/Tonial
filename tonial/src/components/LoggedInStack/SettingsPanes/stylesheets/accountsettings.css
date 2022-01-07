@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap');
+.st-account-main-wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    animation: animate-fade-in 0.4s linear;
+}
+.st-account-header{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: aliceblue;
+}
+.st-account-header > button {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+    background: rgb(39, 37, 37);
+    color: white;
+    left: 0%;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+.st-account-header > button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    background: rgb(53, 50, 50);
+}
+.st-account-header > span {
+    display: flex;
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    right: 0%;
+}
+.st-account-header > span > button{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: rgb(39, 37, 37);
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 14px;
+    border-radius: 10px;
+}
+.st-account-header > span > button:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.st-account-header > span > button:hover > svg{
+    scale: 1.02;
+    animation: rotate_icon 0.4s linear;
+}
+.st-account-header > span > button:focus{
+    background: linear-gradient(135deg, rgb(248, 79, 79), red, rgb(151, 35, 35));
+    color: white;
+}
+.st-account-profile-wrapper{
+    display: flex;
+    height: 250px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.st-account-profile-wrapper > h4 {
+    color: aliceblue;
+    margin: 10px;
+}
+.st-account-profile-pic{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgb(53, 50, 50);
+}
+.st-account-profile-pic > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.st-account-profile-wrapper > button{
+    display: flex;
+    padding: 10px;
+    width: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(31, 30, 30);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.st-account-profile-wrapper > button:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.st-account-profile-wrapper > input {
+    display: none;
+}
+.st-account-profile-pic > svg {
+    color: white;
+    font-size: 20px;
+    animation: animate-spinner-profile 1s linear infinite;
+}
+.st-account-profile-wrapper > button > span {
+    animation: animate-update-btn 2s linear infinite;
+}
+.st-account-details-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    margin-top: 20px;
+    border-top: 0.5px solid rgb(39, 37, 37);
+    background: rgb(31, 30, 30);
+    border-radius: 10px;
+}
+.st-account-username-wrapper{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+.st-account-username-wrapper > h4 {
+    color: white;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+.st-account-username {
+    display: flex;
+    height: 100%;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.st-account-username > h4 {
+    color: white;
+}
+.st-editor-tools{
+    display: none;
+    position: absolute;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    animation: animate-editor-tools 0.4s linear;
+}
+.st-editor-tools > button{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    background: rgb(39, 37, 37);
+    color: white;
+}
+.st-editor-tools > button:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.st-account-username-wrapper:hover{
+    background: rgb(37, 35, 35);
+}
+.st-account-username-wrapper:hover > .st-editor-tools{
+    display: flex;
+}
+.st-editor-modal{
+    display: flex;
+    height: 400px;
+    width: 90%;
+    max-width: 500px;
+    align-items: center;
+    background: rgb(37, 35, 35);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 10px;
+    animation: animate-pop 0.2s linear;
+}
+.st-editor-modal-header{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    position: relative;
+}
+.st-editor-modal-header > button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    border: none;
+    background: rgb(39, 37, 37);
+    color: white;
+}
+.st-editor-modal-header > button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    background: rgb(53, 50, 50);
+}
+.st-form-inputs{
+    display: flex;
+    height: 250px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.st-form-input-div{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(186, 186, 186);
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.357);
+}
+.st-form-input-div:hover {
+    border-bottom: 0.5px solid white;
+    color: white;
+    cursor: pointer;
+}
+.st-form-input-div > input{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+}
+.st-form-input-div input:focus{
+    outline: none;
+}
+.st-form-submit-div{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    min-height: 50px;
+    align-items: center;
+    padding: 20px;
+}
+@keyframes animate-spinner-profile {
+    0% 
+    {
+        transform: rotate(-180deg);
+        scale: 1.02;
+    }
+    40% 
+    {
+        transform: rotate(180deg);
+    }
+    50% 
+    {
+        transform: rotate(-90deg);
+        scale: 1.01;
+    }
+    60% 
+    {
+        transform: rotate(360deg);
+        scale: 1;
+    }
+}
+@keyframes animate-update-btn {
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+@keyframes animate-editor-tools {
+    0%{
+        right: 0%;
+        transform: rotate(180deg);
+        scale: 1.2;
+        opacity: 0.4;
+    }
+    100% {
+        right: 20px;
+        scale: 1;
+        opacity: 1;
+    }
+}
