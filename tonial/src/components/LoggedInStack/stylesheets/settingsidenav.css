@@ -1,0 +1,68 @@
+.setsidenav{
+    display: flex;
+    height: 100%;
+    width: 24%;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 0.5px solid rgb(31, 30, 30);
+    min-width: 300px;
+}
+.setsidenav-title-wrapper{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    color: white;
+}
+.setsidenav-options-wrapper{
+    display: flex;
+    height: 450px;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+.setsidenav-options-header{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+.setsidenav-options-header > h2 {
+    color: white;
+    font-size: 18px;
+}
+.setsidenav-opt-wrapper{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.setsidenav-opt-wrapper > button{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(31, 30, 30);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.setsidenav-opt-wrapper > button:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.setsidenav-opt-wrapper > button:focus{
+    background: linear-gradient(135deg, rgb(65, 65, 253), blue, rgb(24, 24, 189));
+    cursor: none;
+    animation: animate-btn 1.6s linear infinite;
+}
+@media (max-width: 700px) {
+    .setsidenav{
+        width: 100%;
+      }
+}

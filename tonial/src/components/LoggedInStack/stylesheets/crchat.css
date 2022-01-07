@@ -1,0 +1,45 @@
+.crchat-main-wrapper{
+    display: flex;
+    height: 400px;
+    width: 90%;
+    max-width: 500px;
+    background: rgb(26, 25, 25);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 10px;
+    animation: animate-pop 0.2s linear;
+}
+.crchat-title{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.crchat-title > h4 {
+    color: white;
+}
+.crchat-results-wrapper{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+    overflow: auto;
+}
+.crchat-title > button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    border: none;
+    background: rgb(39, 37, 37);
+    color: white;
+}
+.crchat-title > button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    background: rgb(53, 50, 50);
+}
