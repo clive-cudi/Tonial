@@ -10,7 +10,7 @@ export default function Reducer(state=[], action){
         case 'UPDATE_CHAT':
             let workingIndex = state.findIndex(x=>x.chatId == action.payload.chatId);
             console.log(workingIndex)
-            if (workingIndex == -1){
+            if (workingIndex === -1){
                 console.log('Chat not found from store')
                 return state
             } else {
