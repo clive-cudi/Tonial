@@ -24,7 +24,6 @@ function LoggedInRouting() {
     setLoggedInData({ userName: currentUser, avatar: profile, uid: uid });
     // eslint-disable-next-line
   }, []);
-
   return (
     <HomeRoutingCtxProvider>
       <SettingsRoutingCtxProvider>

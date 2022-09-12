@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:dev": "nodemon ./server.js",
+    "server": "node ./server.js"
   },
   "author": "clive",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.12",
+    "nodemon": "^2.0.19",
     "socket.io": "^4.3.1"
   }
 }

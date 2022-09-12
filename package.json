@@ -1,0 +1,23 @@
+{
+  "name": "tonial",
+  "version": "1.0.0",
+  "description": "This is the front end section of the application Built in React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"echo \"Starting dev client and server...\" \" \"npm run server\" \"npm run client\"",
+    "server": "node ./server/server.js",
+    "client": "cd tonial && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clive-cudi/Tonial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clive-cudi/Tonial/issues"
+  },
+  "homepage": "https://github.com/clive-cudi/Tonial#readme"
+}
