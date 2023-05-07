@@ -24,7 +24,7 @@ function CreateChat() {
       // filter initialized chats from the conversations received and set up initially in the context
       axios.get(`http://localhost:4767/user/getconnects?uid=${userName.uid}`).then((res)=>{
         console.log(res.data);
-        setUserConnects(res.data);
+        setUserConnects(res.data ?? []);
         // append a new chat widget to the chat widgets array
       }).catch((e)=>{
         console.log(e)
@@ -52,7 +52,7 @@ function CreateChat() {
                 image={faker.image.avatar()}
                 chatData={chat} */}
           {
-            userConnects.map((connect, index)=>{
+            userConnects?.map((connect, index)=>{
               return (
                 <ChatWidget key={index} username={connect.username} status={true} image={null} chatData={{username: connect.username, uid: connect.uid}} actionNature="addchat" relativeUid={connect.uid} type={"Private"} />
               )

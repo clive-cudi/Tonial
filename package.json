@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/clive-cudi/Tonial/issues"
   },
-  "homepage": "https://github.com/clive-cudi/Tonial#readme"
+  "homepage": "https://github.com/clive-cudi/Tonial#readme",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
 }

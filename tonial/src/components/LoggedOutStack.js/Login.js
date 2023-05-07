@@ -26,6 +26,10 @@ function Login() {
   const [GlobalAuthStatus, setGlobalAuthStatus] = useContext(AuthStatusCtx);
 
   function handleSubmit() {
+    console.log({
+      username,
+      password
+    })
     setSubmittedOnce(true);
     if (username !== "") {
       if (password !== "") {
@@ -33,6 +37,7 @@ function Login() {
         getDoc(doc(db, "users", username))
           .then((snapshot) => {
             if (snapshot.exists()) {
+              console.log(snapshot)
               if (
                 snapshot.data().userName === username &&
                 snapshot.data().password === password
@@ -69,6 +74,7 @@ function Login() {
                 setSubmitting(false);
               }
             } else {
+              console.log("snapshot doesn't exist")
               setAuthStatus(false);
               setSubmitting(false);
             }

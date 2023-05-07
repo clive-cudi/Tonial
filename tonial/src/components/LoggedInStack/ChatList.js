@@ -50,6 +50,7 @@ function ChatList() {
           type: 'CLEAR_STORE'
         })
         setUserName({ uid: uidBckUp });
+        console.log("Fetching chat list data")
         if (userName.uid.length > 1) {
           axios
             .get("http://localhost:4767/user/getconversations/?uid=" + userName.uid)

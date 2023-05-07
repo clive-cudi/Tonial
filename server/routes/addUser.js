@@ -45,10 +45,11 @@ router.route('/getconnects').get((req, res)=>{
     User.findOne({'uid': uid},(err, result)=>{
         if (err){
             console.log(err);
-            res.status(400).json(err)
+            res.status(400).json(err);
         }
         console.log('found');
-        res.json(result.connects);
+        console.log(result);
+        res.json(result?.connects ?? []);
     });
 
 
@@ -77,10 +78,10 @@ router.route('/getprofilepic').get((req,res)=>{
         if (err){
             console.log(err)
         }
-        if (result.profilepic){
-            res.json({result: result.profilepic, email: result.email, about: result.about ? result.about : null})
+        if (result?.profilepic){
+            res.json({result: result?.profilepic, email: result?.email, about: result?.about ? result?.about : null})
         } else {
-            res.json({result: null, email: result.email, about: result.about ? result.about : null})
+            res.json({result: null, email: result?.email, about: result?.about ? result?.about : null})
         }
     })
 })

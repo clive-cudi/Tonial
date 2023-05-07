@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 4767;
 const mongoose = require('mongoose');
-const URI = `mongodb+srv://Flavius:flav0987@cluster0.9e7ml.mongodb.net/TonialDB?retryWrites=true&w=majority`;
+const URI = `mongodb://clive:SycojaWMOAmtZEGB@cluster0-shard-00-00.9e7ml.mongodb.net:27017,cluster0-shard-00-01.9e7ml.mongodb.net:27017,cluster0-shard-00-02.9e7ml.mongodb.net:27017/TonialDB?ssl=true&replicaSet=atlas-1lfuk3-shard-0&authSource=admin&retryWrites=true&w=majority`;
 const addUserRouter = require('./routes/addUser');
 const addChatRouter = require('./routes/addChat');
 const http = require('http');
@@ -37,7 +37,7 @@ io.on('connection',(socket)=>{
                 console.log(err);
             }
             console.log(result)
-            if (result.participants.length > 2){
+            if (result?.participants?.length > 2){
                 // group chat
                 console.log("group Message")
                 // emit groupmsg with data as payload 
@@ -53,9 +53,10 @@ io.on('connection',(socket)=>{
 })
 
 
-const connection = mongoose.connection;
-connection.once('open', ()=>{
-    console.log(`Database Connection Successful`)
+mongoose.connect(URI).then(() => {
+    console.log("Connected to DB!!");
+}).catch((db_connect_err) => {
+    console.log(db_connect_err)
 })
 
 server.listen(port, ()=>{
